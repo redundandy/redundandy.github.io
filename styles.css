@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.statictitle {
+    color:white;
+    font-size: 50px;
+    overflow: hidden;
+}
+
+.dynamictitle {
+    color: white;
+    font-size: 50px;
+    position: relative;
+}
+
+.dynamictitle::after {
+    content: ''; 
+    width: 2px; 
+    height: 1em; 
+    border-right: 5px solid white; 
+    animation: blink 1s infinite; 
+    overflow: hidden;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
