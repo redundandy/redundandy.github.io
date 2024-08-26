@@ -1,48 +1,63 @@
+html, body {
+    margin: 0; /* Remove default margins */
+    height: 100%; /* Ensure full height */
+}
+
 body {
-    background-color: black;
-    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
 }
 
-.container {
-    display: flex;
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: repeat(2, 1fr); 
+    height: 100vh; 
+}
+
+.grid-item {
+    display: flex; 
+    flex-direction: column; 
     align-items: center;
-    background-color: black;
-    color: white;
-    overflow: hidden;
+    color: black; 
+    box-sizing: border-box; 
 }
 
-.statictitle {
-    color:white;
-    font-size: 50px;
-    overflow: hidden;
+.one {
+    background-color: white;
+    font-size: 20px;
+    padding-top: 30%;
 }
 
-.dynamictitle {
-    color: white;
-    font-size: 50px;
-    position: relative;
+h1 {
+    font-size: 6rem; /* Font size for <h1> */
+    margin: 0; /* Remove default margin */
+    font-weight: 300;
 }
 
-.dynamictitle::after {
-    content: ''; 
-    width: 2px; 
-    height: 1em; 
-    border-right: 5px solid white; 
-    animation: blink 1s infinite; 
-    overflow: hidden;
+h2 {
+    font-size: 1.5rem; /* Font size for <h2> */
+    margin: 0; /* Remove default margin */
+    font-weight: 300;
 }
 
-@keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.two {
+    background-color: lightgray;
+    grid-row: 2; /* Places this item in the second row */
+    padding: 100px;
+    padding-top: 0%;
 }
 
+.three {
+    background-color: darkgray;
+    grid-column: 2; /* Spans the second column */
+    grid-row: span 2; /* Spans both rows */
+    padding-top: 20%;
+}
 
-
+p {
+    font-weight: 300;
+}
 
 
 
